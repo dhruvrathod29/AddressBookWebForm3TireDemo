@@ -64,10 +64,11 @@
                 </div>
             </div>
             <br />
-            <asp:Label runat="server" class="alert-success" style="color:#151414" ID="lblMessage" EnableViewState="false" />
-        
+             <div class="alert alert-danger" id="divMessage" runat="server" visible="false">
+                <asp:Label runat="server" class="alert-success" Style="color: #151414" ID="lblMessage" EnableViewState="false" />
+            </div>
             <br />
-            <asp:GridView runat="server" ID="gvLOC_State" CssClass="table table-hover" AutoGenerateColumns="false">
+            <asp:GridView runat="server" ID="gvLOC_State" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvState_RowCommand">
                 <Columns>
 
 
