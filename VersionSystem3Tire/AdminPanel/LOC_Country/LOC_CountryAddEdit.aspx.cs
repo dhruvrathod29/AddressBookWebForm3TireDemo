@@ -11,4 +11,9 @@ public partial class AdminPanel_LOC_Country_LOC_CountryAddEdit : System.Web.UI.P
     {
 
     }
+
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+
+    }
 }
