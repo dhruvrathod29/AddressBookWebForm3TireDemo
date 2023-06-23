@@ -144,8 +144,6 @@ namespace VersionSystem3Tire.DAL
             }
         }
 
-
-
         #endregion
 
         #region Delete Operation

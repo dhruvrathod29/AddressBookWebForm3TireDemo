@@ -142,7 +142,7 @@
                 <div class="col-md-5">
                 </div>
                 <div class="col-md-1">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" class="btn btn-a" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnSave" runat="server" Text="Save" class="btn btn-a" />
                     <%-- <input type="submit" value="Save" class="btn btn-a" />--%>
                 </div>
 

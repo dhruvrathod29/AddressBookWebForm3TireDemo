@@ -67,7 +67,7 @@
             <asp:Label runat="server" class="alert-success" style="color:#151414" ID="lblMessage" EnableViewState="false" />
         
             <br />
-            <asp:GridView runat="server" ID="gvLOC_State" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvState_RowCommand">
+            <asp:GridView runat="server" ID="gvLOC_State" CssClass="table table-hover" AutoGenerateColumns="false">
                 <Columns>
 
 

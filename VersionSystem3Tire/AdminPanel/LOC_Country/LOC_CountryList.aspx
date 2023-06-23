@@ -70,10 +70,11 @@
                 </div>
             </div>
             <br />
-            <asp:Label runat="server" class="alert-success" Style="color: #151414" ID="lblMessage" EnableViewState="false" />
-
+            <div class="alert alert-danger" id="divMessage" runat="server" visible="false">
+                <asp:Label runat="server" class="alert-success" Style="color: #151414" ID="lblMessage" EnableViewState="false" />
+            </div>
             <br />
-            <asp:GridView runat="server" ID="gvLOC_Country" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvCountry_RowCommand">
+            <asp:GridView runat="server" ID="gvLOC_Country" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvLOC_Country_RowCommand">
                 <Columns>
 
 
