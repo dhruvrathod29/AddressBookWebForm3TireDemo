@@ -6,12 +6,19 @@ using System.Web;
 /// <summary>
 /// Summary description for LOC_StateBAL
 /// </summary>
-public class LOC_StateBAL
+/// 
+
+namespace VersionSystem3Tire.BAL
 {
-    public LOC_StateBAL()
+    public class LOC_StateBAL
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        #region LOC_State Constructore
+        public LOC_StateBAL()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
+        #endregion
     }
 }

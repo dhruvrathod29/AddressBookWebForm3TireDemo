@@ -265,7 +265,6 @@ namespace VersionSystem3Tire.DAL
                         objCmd.Parameters.AddWithValue("@CountryID", CountryID);
                         #endregion
 
-
                         #region ReadData And Set Controls
                         
                         LOC_CountryENT entLOC_Country = new LOC_CountryENT();
@@ -282,6 +281,14 @@ namespace VersionSystem3Tire.DAL
                                 {
                                     entLOC_Country.CountryCode = Convert.ToString(objSDR["CountryCode"]);
 
+                                }
+                                if (!objSDR["CreationDate"].Equals(DBNull.Value))
+                                {
+                                    entLOC_Country.CreationDate = Convert.ToDateTime(objSDR["CreationDate"]);
+                                }
+                                if (!objSDR["ModificationDate"].Equals(DBNull.Value))
+                                {
+                                    entLOC_Country.ModificationDate = Convert.ToDateTime(objSDR["ModificationDate"]);
                                 }
                             }
                         }
