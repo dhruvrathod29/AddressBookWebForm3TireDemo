@@ -100,7 +100,8 @@
                     <asp:DropDownList ID="ddlCountryID" runat="server" class="form-control">
                        
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvCountry" runat="server" ErrorMessage="Please Select Country" ControlToValidate="ddlCountryID" Display="Dynamic" ForeColor="Red" InitialValue="-1"></asp:RequiredFieldValidator>
+                     <asp:RequiredFieldValidator ID="rfvCountry" runat="server" ErrorMessage="Please Select Country" ControlToValidate="ddlCountryID" Display="Dynamic" ForeColor="Red" InitialValue="-1"></asp:RequiredFieldValidator>
+                    
                     <%--<input type="text" placeholder="Enter Country Name" required asp-for="CountryName" class="form-control" />--%>
                     <%--<span asp-validation-for="CountryName" class="text-danger"></span>--%>
                 </div>
@@ -113,7 +114,8 @@
                 </div>
                 <div class="col-md-3">
                     <asp:TextBox runat="server" ID="txtStateName" placeholder="Enter State Name" class="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvStateName" runat="server" ErrorMessage="Please Enter State Name" ControlToValidate="txtStateName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                   <asp:RequiredFieldValidator ID="rfvStateName" runat="server" ErrorMessage="Please Enter State Name" ControlToValidate="txtStateName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                    
                     <%--<input type="text" placeholder="Enter Country Code" required asp-for="CountryCode" class="form-control" />
                     <span asp-validation-for="CountryCode" class="text-danger"></span>--%>
                 </div>
@@ -127,8 +129,7 @@
                 <div class="col-md-3">
                     <asp:TextBox runat="server" ID="txtStateCode" placeholder="Enter State Code" class="form-control"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvStateCode" runat="server" ErrorMessage="Please Enter State Code" ControlToValidate="txtStateCode" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-            
-                    <%--<input type="text" placeholder="Enter Country Name" required asp-for="CountryName" class="form-control" />--%>
+                     <%--<input type="text" placeholder="Enter Country Name" required asp-for="CountryName" class="form-control" />--%>
                     <%--<span asp-validation-for="CountryName" class="text-danger"></span>--%>
                 </div>
                 <div class="col-md-1">
@@ -142,7 +143,7 @@
                 <div class="col-md-5">
                 </div>
                 <div class="col-md-1">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" class="btn btn-a" />
+                    <asp:Button ID="btnSave" runat="server" Text="Save" class="btn btn-a" OnClick="btnSave_Click" />
                     <%-- <input type="submit" value="Save" class="btn btn-a" />--%>
                 </div>
 
@@ -150,8 +151,6 @@
 
                     <a class="btn btn-b" href="LOC_StateList.aspx" type="submit" value="Cancel">Cancel
                     </a>
-
-
                 </div>
             </div>
 

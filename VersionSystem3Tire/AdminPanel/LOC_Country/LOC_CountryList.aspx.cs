@@ -9,7 +9,7 @@ using VersionSystem3Tire.BAL;
 
 public partial class AdminPanel_LOC_Country_LOC_CountryList : System.Web.UI.Page
 {
-    #region Load Event
+    #region Page Load Event
     protected void Page_Load(object sender, EventArgs e)
     {
 
