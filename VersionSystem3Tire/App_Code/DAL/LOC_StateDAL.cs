@@ -54,17 +54,20 @@ namespace VersionSystem3Tire.DAL
                         #region Prepare Command
 
                         objCmd.CommandType = CommandType.StoredProcedure;
-                        objCmd.CommandText = "PR_LOC_State_InsertRecord";
-                        objCmd.Parameters.Add("@StateID", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        objCmd.CommandText = "[PR_LOC_State_InsertRecord]";
+                        objCmd.Parameters.Add("@StateID", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
                         objCmd.Parameters.Add("@CountryID", SqlDbType.Int).Value = entLOC_State.CountryID;
                         objCmd.Parameters.Add("@StateName", SqlDbType.NChar).Value = entLOC_State.StateName;
                         objCmd.Parameters.Add("@StateCode", SqlDbType.NChar).Value = entLOC_State.StateCode;
-                        objCmd.Parameters.Add("@CreationDate", SqlDbType.DateTime).Value = entLOC_State.CreationDate;
-                        objCmd.Parameters.Add("@ModificationDate", SqlDbType.NChar).Value = entLOC_State.ModificationDate;
-
+                       /* objCmd.Parameters.Add("@CreationDate", SqlDbType.DateTime).Value = entLOC_State.CreationDate;
+                        objCmd.Parameters.Add("@ModificationDate", SqlDbType.DateTime,DateTime.Now.ToString("dd-MM-yyyy")).Value = entLOC_State.ModificationDate;
+*/
                         objCmd.ExecuteNonQuery();
 
-                        entLOC_State.StateID = (SqlInt32)objCmd.Parameters["StateID"].Value;
+                       /* if (objCmd.Parameters["StateID"] != null)
+                        {
+                            entLOC_State.StateID = Convert.ToInt32(objCmd.Parameters["StateID"].Value);
+                        }*/
                         return true;
                         #endregion
 
@@ -110,7 +113,7 @@ namespace VersionSystem3Tire.DAL
                         objCmd.Parameters.AddWithValue("@CountryID", entLOC_State.CountryID);
                         objCmd.Parameters.AddWithValue("@StateName", entLOC_State.StateName);
                         objCmd.Parameters.AddWithValue("@StateCode", entLOC_State.StateCode);
-                        objCmd.Parameters.AddWithValue("@CreationDate", entLOC_State.CreationDate);
+                    
                         objCmd.Parameters.AddWithValue("@ModificationDate", entLOC_State.ModificationDate);
 
 

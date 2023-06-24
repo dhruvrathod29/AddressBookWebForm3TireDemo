@@ -81,8 +81,8 @@ namespace VersionSystem3Tire.ENT
         #endregion
 
         #region Creation Date
-        protected DateTime _CreationDate;
-        public DateTime CreationDate
+        protected SqlDateTime _CreationDate;
+        public SqlDateTime CreationDate
         {
             get
             {
@@ -96,8 +96,8 @@ namespace VersionSystem3Tire.ENT
         #endregion
 
         #region ModificationDate
-        protected DateTime _ModificationDate;
-        public DateTime ModificationDate
+        protected SqlDateTime _ModificationDate;
+        public SqlDateTime ModificationDate
         {
             get
             {

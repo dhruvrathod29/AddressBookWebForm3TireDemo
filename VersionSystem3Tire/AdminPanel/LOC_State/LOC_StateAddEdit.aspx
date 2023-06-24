@@ -84,8 +84,9 @@
             </div>
             <hr />
             <br />
-            <asp:Label runat="server" class="alert-success" style="color:#151414" ID="lblMessage" EnableViewState="false" />
-            
+             <div class="alert alert-success" id="divMessage" runat="server" visible="false">
+                <asp:Label runat="server" class="alert-success" style="color:#151414" ID="lblMessage" EnableViewState="false" />
+            </div>
             <br />
            
         </div>
