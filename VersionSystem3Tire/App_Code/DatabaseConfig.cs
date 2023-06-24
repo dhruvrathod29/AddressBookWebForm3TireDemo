@@ -12,15 +12,19 @@ namespace VersionSystem3Tire
 {
     public class DatabaseConfig
     {
+        #region DataBaseConfig Constructore
         public DatabaseConfig()
         {
             //
             // TODO: Add constructor logic here
             //
         }
+        #endregion
 
+        #region Connection String
         public static string ConnectionString = ConfigurationManager.ConnectionStrings["WebDeveloperConnectionString"].ConnectionString.ToString();
+        #endregion
     }
 
-   
+
 }

@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/MasterPage.master" AutoEventWireup="true" CodeFile="LOC_CountryAddEdit.aspx.cs" Inherits="AdminPanel_LOC_Country_LOC_CountryAddEdit" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphMainContent" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMainContent" runat="Server">
 
 
-     <style>
+    <style>
         h2 {
             position: relative;
             font-size: 14vw;
@@ -85,8 +85,8 @@
             </div>
             <hr />
             <br />
-            <div class="alert alert-danger" id="divMessage" runat="server" visible="false">
-                <asp:Label runat="server" class="alert-success" style="color:#151414" ID="lblMessage" EnableViewState="false" />
+            <div class="alert alert-success" id="divMessage" runat="server" visible="false">
+                <asp:Label runat="server" class="alert-success" Style="color: #151414" ID="lblMessage" EnableViewState="false" />
             </div>
             <br />
         </div>
@@ -102,7 +102,7 @@
                         
                     </asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvCountryName" runat="server" ErrorMessage="Please Enter Country Name" ControlToValidate="txtCountryName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-            
+
                     <%--<input type="text" placeholder="Enter Country Name" required asp-for="CountryName" class="form-control" />--%>
                     <%--<span asp-validation-for="CountryName" class="text-danger"></span>--%>
                 </div>
@@ -118,7 +118,7 @@
 
                     </asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvCountryCode" runat="server" ErrorMessage="Please Enter Country Code" ControlToValidate="txtCountryCode" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-            
+
                     <%--<input type="text" placeholder="Enter Country Code" required asp-for="CountryCode" class="form-control" />
                     <span asp-validation-for="CountryCode" class="text-danger"></span>--%>
                 </div>
@@ -147,7 +147,7 @@
     <!-- End Intro Single-->
 
 
-  
+
 
 </asp:Content>
 

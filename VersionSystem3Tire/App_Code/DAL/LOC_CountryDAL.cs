@@ -62,12 +62,10 @@ namespace VersionSystem3Tire.DAL
                         objCmd.Parameters.Add("@CountryID", SqlDbType.Int).Direction = ParameterDirection.Output;
                         objCmd.Parameters.Add("@CountryName", SqlDbType.NChar).Value = entLOC_Country.CountryName;
                         objCmd.Parameters.Add("@CountryCode", SqlDbType.NChar).Value = entLOC_Country.CountryCode;
-                        objCmd.Parameters.Add("@CreationDate", SqlDbType.DateTime).Value = entLOC_Country.CreationDate;
-                        objCmd.Parameters.Add("@ModificationDate", SqlDbType.NChar).Value = entLOC_Country.ModificationDate;
-
+                       
                         objCmd.ExecuteNonQuery();
 
-                        entLOC_Country.CountryID = (SqlInt32)objCmd.Parameters["CountryID"].Value;
+                       
                         return true;
                         #endregion
 
@@ -112,7 +110,7 @@ namespace VersionSystem3Tire.DAL
                         objCmd.Parameters.AddWithValue("@CountryID", entLOC_Country.CountryID);
                         objCmd.Parameters.AddWithValue("@CountryName", entLOC_Country.CountryName);
                         objCmd.Parameters.AddWithValue("@CountryCode", entLOC_Country.CountryCode);
-                        objCmd.Parameters.AddWithValue("@CreationDate", entLOC_Country.CreationDate);
+                       
                         objCmd.Parameters.AddWithValue("@ModificationDate", entLOC_Country.ModificationDate);
 
 
@@ -273,23 +271,16 @@ namespace VersionSystem3Tire.DAL
                         {
                             while (objSDR.Read())
                             {
-                                if (!objSDR["CountryID"].Equals(DBNull.Value))
+                                if (!objSDR["CountryName"].Equals(DBNull.Value))
                                 {
-                                    entLOC_Country.CountryID = Convert.ToInt32(objSDR["CountryID"]);
+                                    entLOC_Country.CountryName = Convert.ToString(objSDR["CountryName"]);
                                 }
                                 if (!objSDR["CountryCode"].Equals(DBNull.Value))
                                 {
                                     entLOC_Country.CountryCode = Convert.ToString(objSDR["CountryCode"]);
 
                                 }
-                                if (!objSDR["CreationDate"].Equals(DBNull.Value))
-                                {
-                                    entLOC_Country.CreationDate = Convert.ToDateTime(objSDR["CreationDate"]);
-                                }
-                                if (!objSDR["ModificationDate"].Equals(DBNull.Value))
-                                {
-                                    entLOC_Country.ModificationDate = Convert.ToDateTime(objSDR["ModificationDate"]);
-                                }
+                               
                             }
                         }
                         return entLOC_Country;
